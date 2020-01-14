@@ -25,7 +25,13 @@ $(document).bind('mousedown', function (e) {
         });
         ++added;
         if (added === 1)
+        {
             $('#instructions').remove();
+            $('.click-info').css('display', 'block');
+        }        
+        $('#clickCount').text(added);
+        $('#clickX').text(e.pageX);
+        $('#clickY').text(e.pageY);
         clicks = 0;
     }
 });
